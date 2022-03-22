@@ -73,9 +73,32 @@
     .two .left h2{
         color: #ffffff;
         font-size: 40px;
-        margin: 20px 0px 0px;
+        margin: 20px 20px ;
         font-weight: bold;
     }
+    .two .left1 h2{
+        color: green;
+        font-size: 40px;
+        margin: 20px 20px ;
+        font-weight: bold;
+    }
+
+    .two p{
+        color: #ffffff;
+        font-size: 15px;
+        margin: 20px 0px ;
+        font-weight: bold;
+        
+    }
+
+    .two .right{
+        text-align: end;
+
+    }
+    .two .right{
+        margin: auto;
+        }
+
     .title{
         text-align: center;
     }
@@ -94,21 +117,21 @@
     }
 
 
-    .about .wrap{
+    .three .wrap{
         width: 1100px;
         margin: auto;
         font-size: 0;
     }
-    .about .wrap .row{
+    .three .wrap .row{
         padding: 40px 0;
     }
-    .about .wrap .row:not(:first-child){
+    .three .wrap .row:not(:first-child){
         border-top: 1px dotted #666;
     }
-    .about .wrap .row:nth-child(odd){
+    .three .wrap .row:nth-child(odd){
         direction: rtl;
     }
-    .about .pic,.txt{
+    .three .pic,.txt{
         display: inline-block;
         width: 50%;
         box-sizing: border-box;
@@ -118,14 +141,14 @@
         vertical-align: middle;
         direction: ltr;
     }
-    .about .wrap .row:nth-child(even) .txt{
+    .three .wrap .row:nth-child(even) .txt{
         text-align: left;
     }
-    .about .txt h2{
+    .three .txt h2{
         font-size: 40px;
         line-height: 1.5;
     }
-    .about .pic img{
+    .three .pic img{
         width: 100%;
     }
     .list{
@@ -143,88 +166,88 @@
     }
 
 
-    .service{
+    .four{
         background-color: #F4F4F4;
         padding: 40px 0;
     }
-    .service .wrap{
+    .four .wrap{
         padding: 0 100px;
     }
-    .service .row{
+    .four .row{
         display: flex;
     }
-    .service h2{
+    .four h2{
         margin: 0 auto 20px;
         text-align: center;
         font-size: 35px;
         padding: 20px 0;
     }
-    .service .item{
+    .four .item{
         margin: 0 10px;
         width: 500px;
         text-align: center;
     }
-    .service h3{
+    .four h3{
         font-size: 18px;
         margin: 30px auto 10px;
     }
-    .service  p{
+    .four  p{
         font-size: 16px;
         line-height: 2;
         margin: 0 auto 40px;
     }
-    .service .item img{
+    .four .item img{
         background-color: #fff;
         border-radius: 50%;
     }
 
 
-    .brand h2{
+    .five h2{
         text-align: center;
         font-size: 35px;
         margin: 50px 0 20px;
     }
-    .brand .wrap{
+    .five .wrap{
         display: flex;
         flex-wrap: wrap;
         width: 1100px;
         margin: auto;
     }
-    .brand .item{
+    .five .item{
         width: 200px;
         padding-bottom: 20px;
     }
 
 
-    .advertise .row{
+    .six .row{
         display: flex;
         flex-direction: row-reverse;
         flex-wrap: wrap;
         margin: 10px 210px;
     }
-    .advertise .row .txt a{
+    .six .row .txt a{
         font-size: 18px;
         text-decoration: none;
     }
-    .advertise .row .txt p{
+    .six .row .txt p{
         font-size: 16px;
         padding-bottom: 40px;
     }
 
 
-    .banner2 img{
+    .seven img{
         display: flex;
         flex-wrap: wrap;
         width: 100%;
     }
 
 
-    .footer{
+    .eight{
         background-color: #00142D;
         padding: 40px 0 80px;
         color: #ccc;
     }
-    .footer .group{
+    .eight .group{
         display: flex;flex-wrap: wrap;
         flex-wrap: wrap;
         width: 100%;
@@ -233,6 +256,7 @@
     .col{
         text-align: left;
         margin: 0 50px;
+
         /* width: 160px; */
     }
     .col h3{
@@ -243,11 +267,11 @@
         font-size: 16px;
         margin: 20px 0;
     }
-    .button{
+    .eight .button{
         text-align: right;
         margin: 60px 150px;
     }
-    .button a{
+    .eight .button a{
         background-color: #9FDFDF	;
         padding: 10px 45px;
         font-size: 14px;
@@ -256,7 +280,7 @@
     }
 
 
-    .last .wrap{
+    .eight .last .wrap{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -264,7 +288,7 @@
         margin: auto;
         padding-top: 20px;
     }
-    .last .wrap a{
+    .eight .last .wrap a{
         text-decoration: none;
         color: #fff;
     }
