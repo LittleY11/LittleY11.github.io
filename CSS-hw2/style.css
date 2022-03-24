@@ -2,17 +2,30 @@
         margin: 0;
         padding: 0;
     }
-    body{
+    /* body{
         padding-top: 60px;
+    } */
+    header {
+        width: 1200px;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: #ffffff;
+        flex-wrap: wrap;
+        padding: 5px;
+    }
+    header a{
+        padding: 0;
+        margin: 0;
     }
     nav{
-        background-color: #00142D;
+        background-color: #ffff;
         text-align: end;
         position: fixed;
-        top: 0; 
+        top: 40; 
         left: 0;    
         width: 100%;
-        
         display: inline-block;
     }
     nav a{
@@ -25,20 +38,6 @@
         box-sizing: border-box;  
         /* top: 0; 
         left: 0;     */
-    }
-    .one {
-        width: 1200px;
-        height: 40px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        background-color: #ffffff;
-        flex-wrap: wrap;
-        padding: 5px;
-    }
-    .one a{
-        padding: 0;
-        margin: 0;
     }
     .one image{
         display: inline;
