@@ -1,0 +1,403 @@
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+/* body{
+    padding-top: 60px;
+} */
+/* header {
+    
+} */
+header{
+    background-color: #000;
+}
+header .black{
+    width: 1200px;
+    margin: auto;
+}
+.bar{
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    background-color: #00142D;
+    font-size: 15px;
+    color: #ffff;
+}
+.bar i{
+    color:#fff;
+    vertical-align: middle;
+    text-decoration: none;
+    padding:10px;
+}
+
+.bar span{
+    padding:10px;
+}
+.bar a{
+    /* margin: 2px; */
+    color: #fff ;
+    text-decoration: none;
+    display: inline-block;
+    justify-content: center;
+    padding: 10px ;
+}
+
+span{
+    color: #fff ;
+    padding: auto;
+}
+
+.white{
+    border: #0000ff solid 1px;    
+    width: 100%;
+    margin: auto;
+}
+
+.tour{
+    background-color: #ffff;
+    /* text-align: end; */
+    /* position: fixed; */
+    /* top: 40;  */
+    /* left: 0;     */
+    width: 100%;
+    display: inline-block;
+    flex-grow: 20%;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.tour img{
+    margin: 20px;
+    padding: 26px 0px;
+}
+.tour a{
+    color: black;
+    padding: 30px 0;
+    margin: 0px 7px;
+    font-size: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+.freetour a{
+    border-radius: 30px;
+    color:#fff;
+    background-color: #0000ff;
+    padding: 10px 20px;
+}
+
+
+.banner{
+    background-color: #00142d;
+}
+
+.banner .wrap{
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.banner h1{
+    font-size: 40px;
+    color: #fff;
+}
+
+.banner h2{
+    font-size: 38px;
+    color: #00c66a;
+}
+
+.banner p{
+    margin: 0px 0px50px;
+    color: #fff;
+}
+
+.banner .input{
+    font-size: 100%;
+    color: #fff;
+    background: unset;
+    border: 1px solid #fff;
+    border-width: 0 0 1px;
+    padding: 0.5rem 1rem;
+}
+
+.banner .free{
+    border-radius: 30px;
+    color:#fff;
+    background-color: #0000ff;
+    padding: 1px 6px;
+    margin: 20px 0px 0px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+.a{
+    margin: 5px;
+}
+
+
+.title{
+    text-align: center;
+    width: 1200px;
+    height: 300px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+
+}
+.title h2{
+    font-size: 38px;
+    width: 1200px;
+
+    line-height: 1.2;
+}
+.title p{
+    font-size: 16px;
+    width: 1200px;
+    line-height: 2;
+}
+
+
+.home-content .wrap{
+    width: 1200px;
+    margin: auto;
+    font-size: 0;
+}
+.home-content .wrap .row{
+    padding: 40px 0;
+}
+.home-content .wrap .row:not(:first-child){
+    border-top: 1px dotted #666;
+}
+.home-content .pic,.info{
+    display: inline-block;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 1em;
+    font-size: 16px;
+    line-height: 2;
+    vertical-align: middle;
+    direction: ltr;
+}
+.home-content img{
+    width: 100%;
+}
+.home-content .info h3{
+    font-size: 30px;
+    line-height: 1.5;
+}
+.home-content .info .list ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.info .list li{
+    width: 50%;
+    list-style: none;
+    margin-bottom: 1em;
+
+}
+.info .list span{
+    width: 20px;
+    height: 20px;
+    background-color: #8df;
+    text-align: center;
+    border-radius: 50%;
+    vertical-align: middle;
+    color: #000;
+}
+
+.info a{
+    color: #0000ff;
+}
+
+
+.sever{
+    background-color: #f4f5f7;
+}
+.sever h2{
+    text-align: center;
+    font-size: 38px;
+}
+.sever .wrap{
+    width: 1200px;
+    margin: auto;
+}
+.sever .row{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+.sever .item{
+    padding: 30px;
+}
+.sever h3{
+    font-size: 30px;
+    line-height: 1.5;
+}
+.sever p{
+    font-size: 16px;
+}
+
+.pop{
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.pop h2{
+    font-size: 38px;
+    text-align: center;
+    margin: 0px 0px 45px;
+}
+
+.pop span{
+    color:#0061ff;
+}
+
+.popularity{
+    width: 1200px;
+    margin: auto;
+}
+.popularity ul{
+    width: 1200px;
+    list-style: none;
+    display: flex;
+}
+.popularity .li{
+    width: 20%;
+    margin: auto;
+}
+.popularity .img{
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+
+
+
+.home-content{
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: row;
+}
+.bonny{
+    margin: 10px;
+    padding: 10px;
+    width: 600px;
+    font-size: 20px;
+}
+.bonny a{
+    font-size: 15px;
+    text-decoration: none;
+    color: #0061ff;
+}
+.bonny p{
+    font-size: 16px;
+    line-height: 2;
+    padding: 20px 0;
+}
+.bonny .img{
+    font-size: 16px;
+    line-height: 2;
+    padding: 20px 0;
+}
+
+.glob{
+    background:#172b4d url(https://img.shoplineapp.com/media/image_clips/609d0f5c33fdc6001aa95da6/original.png?1620905820) no-repeat bottom right ;    
+    height: 300px;
+
+    background-size: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.asia {
+    padding: 0px 25px;
+}
+.asia h2{
+    font-size: 250%;
+    line-height: calc(10px + 2ex + 10px);
+    margin-bottom: 50px;
+    color: #fff;
+    font-weight: 500;
+    margin: 0px 0px 50px;
+    font-size: 38px;
+}
+
+.asia a{
+    display: block;
+    width: 360px;
+    background-color: #0061FF;
+    border-radius: 30px;
+    padding: 10px 0;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+.revamp{
+    background-color: #00142D;
+    padding: 40px 0px 80px;
+    color: #ccc;
+}
+.revamp .group{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+}
+.col{
+    text-align: left;
+    margin: 0 50px;
+}
+.col h3{
+    font-size: 30px;
+    margin: 50px 0;
+}
+.col div{
+    font-size: 16px;
+    margin: 20px 0;
+}
+.revamp .button{
+    text-align: right;
+    margin: 60px 150px;
+}
+.revamp .button a{
+    background-color: #9FDFDF	;
+    padding: 10px 45px;
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+.revamp .last .wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1200px;
+    margin: auto;
+    padding-top: 20px;
+}
+.revamp .last .wrap a{
+    text-decoration: none;
+    color: #fff;
+}
