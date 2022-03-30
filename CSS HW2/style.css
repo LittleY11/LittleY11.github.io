@@ -3,7 +3,7 @@
     padding: 0;
 } */
 /* body{
-    padding-top: 60px;
+    padding-top: 0px;
 } */
 /* header {
     
@@ -14,6 +14,8 @@ header{
 header .black{
     width: 1200px;
     margin: auto;
+    top:0;
+
 }
 .bar{
     height: 40px;
@@ -196,7 +198,7 @@ ul{
     width: 100%;
 }
 .home-content .info h3{
-    font-size: 30px;
+    font-size: 20px;
     line-height: 1.5;
 }
 .home-content .info .list ul{
@@ -240,12 +242,13 @@ ul{
     flex-wrap: wrap;
     text-align: center;
     justify-content: center;
+    
 }
 .sever .item{
     padding: 30px;
 }
 .sever h3{
-    font-size: 30px;
+    font-size: 20px;
     line-height: 1.5;
 }
 .sever p{
@@ -360,15 +363,15 @@ ul{
 .revamp .group{
     display: flex;
     flex-wrap: wrap;
-    margin: auto;
+    /* margin: auto; */
     justify-content: center;
 }
 .col{
     text-align: left;
-    margin: 0 50px;
+    margin: 0 20px;
 }
 .col h3{
-    font-size: 30px;
+    font-size: 20px;
     margin: 50px 0;
 }
 .col div{
