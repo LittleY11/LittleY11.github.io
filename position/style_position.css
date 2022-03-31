@@ -1,0 +1,153 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.function h2{
+    background-color: #ae0014;
+    font-size: 40px;
+
+}
+.function h2 span{
+    font-size: 120px;
+    writing-mode: vertical-lr;
+    vertical-align: middle;
+}
+.control .function h3{
+    font-size: 25px;
+    padding: 10px;
+}
+.control-odd .function h3{
+    font-size: 25px;
+    padding: 30px 10px 10px;
+}
+.function p{
+    font-size: 18px;
+    line-height: 2;
+    padding: 0 10px 20px;
+}
+
+
+.innovation h2{
+    color: #bb0404;
+    font-weight: bold;
+    font-size: 20px;
+}
+.innovation-title{
+    color: #000;
+    padding: 20px 0;
+    width: 100%;
+}
+.innovation h2::after{
+    content: '―――――――――――――――――――――――';
+}
+.innovation h3{
+    background-color: #000;
+    color: #fff;
+    padding: 5px 15px;
+    
+}
+.innovation p{
+    margin: 10px 0;
+    line-height: 1.5;
+}
+.innovation p::before{
+    content: '▪';
+    color: red;
+} 
+
+.control-odd{
+    width: 960px;
+    position: relative;
+    margin: 70px auto;
+}
+.control-odd .block{
+    background-color: #eeeeee;
+    width: 430px;
+    height: 290px;
+    z-index: -1;
+    position: absolute;
+    right: 0px;
+    top: 42px;
+}
+.control-odd .function{
+    width: 330px;
+    background-color: black;
+    color: #fff;
+    position: absolute;
+    z-index: 2;
+}
+.control-odd img{
+    position: relative;
+    top: 120px;
+    left: 180px;
+}
+.control-odd .youtube-icon{
+    position: relative;
+    z-index: 2;
+    left: 610px;
+    bottom: 150px;
+}
+.control-odd .innovation{
+    display: flex;
+    flex-direction: column;
+    background-color: #ddd;
+    align-items: flex-start;
+    width: 680px;
+    line-height: 1;
+    padding: 0 20px;
+    font-size: 16px;
+    position: relative;
+    bottom:0px;
+    right: -45px;
+}
+
+.control{
+    width: 960px;
+    height: 760px;
+    position: relative;
+    margin: 70px auto;
+}
+.control .block{
+    background-color: #eeeeee;
+    width: 520px;
+    height: 338px;
+    position: relative;
+    z-index: -1;
+    left: 287px;
+    top: 54px;
+}
+.control .function{
+    width: 350px;
+    background-color: black;
+    color: #fff;
+    position: absolute;
+    z-index: 2;
+    top: -1px;
+    left: 610px;
+}
+.control img{
+    position: relative;
+    top: -221px;
+    left: 69px;
+}
+.control .youtube-icon{
+    position: relative;
+    z-index: 2;
+    right: 11px;
+    bottom: 240px;
+}
+.control .innovation{
+    display: flex;
+    flex-direction: column;
+    background-color: #ddd;
+    align-items: flex-start;
+    width: 682px;
+    line-height: 1;
+    padding: 0 20px;
+    font-size: 16px;
+    position: relative;
+    bottom: 293px;
+    left: 233px;
+} 
