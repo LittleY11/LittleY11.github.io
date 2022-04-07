@@ -7,6 +7,7 @@ body{
 .function h2{
     background-color: #ae0014;
     font-size: 40px;
+    text-align: center;
 
 }
 .function h2 span{
@@ -15,17 +16,17 @@ body{
     vertical-align: middle;
 }
 .control .function h3{
-    font-size: 25px;
-    padding: 10px;
+    font-size: x-large;
+    padding: 30px 22px 10px;
 }
 .control-odd .function h3{
-    font-size: 25px;
-    padding: 30px 10px 10px;
+    font-size: x-large;
+    padding: 30px 22px 10px;
 }
 .function p{
-    font-size: 18px;
+    font-size: 20px;
     line-height: 2;
-    padding: 0 10px 20px;
+    padding: 0px 25px 19px;
 }
 
 
@@ -33,14 +34,23 @@ body{
     color: #bb0404;
     font-weight: bold;
     font-size: 20px;
+    text-align: center;
 }
 .innovation-title{
     color: #000;
     padding: 20px 0;
     width: 100%;
+    display: flex;
+    align-items: center;
+    align-content: space-between;    
 }
 .innovation h2::after{
-    content: '―――――――――――――――――――――――';
+    content: '';
+    display: block;
+    width: 66%;
+    margin-left: 12px;
+    border-top: 1px solid #ff0000;
+
 }
 .innovation h3{
     background-color: #000;
@@ -59,20 +69,22 @@ body{
 
 .control-odd{
     width: 960px;
+    height: 805px;
     position: relative;
-    margin: 70px auto;
+    margin: 50px auto;
 }
 .control-odd .block{
     background-color: #eeeeee;
-    width: 430px;
-    height: 290px;
+    width: 440px;
+    height: 270px;
     z-index: -1;
     position: absolute;
     right: 0px;
     top: 42px;
 }
 .control-odd .function{
-    width: 330px;
+    width: 355px;
+    height: 390px;
     background-color: black;
     color: #fff;
     position: absolute;
@@ -86,8 +98,8 @@ body{
 .control-odd .youtube-icon{
     position: relative;
     z-index: 2;
-    left: 610px;
-    bottom: 150px;
+    left: 648px;
+    bottom: 232px;
 }
 .control-odd .innovation{
     display: flex;
@@ -95,42 +107,42 @@ body{
     background-color: #ddd;
     align-items: flex-start;
     width: 680px;
-    line-height: 1;
+    line-height: 0.5;
     padding: 0 20px;
     font-size: 16px;
     position: relative;
-    bottom:0px;
+    bottom:-50px;
     right: -45px;
 }
 
 .control{
     width: 960px;
-    height: 760px;
+    height: 842px;
     position: relative;
-    margin: 70px auto;
+    margin: 50px auto;
 }
 .control .block{
     background-color: #eeeeee;
     width: 520px;
-    height: 338px;
+    height: 410px;
     position: relative;
     z-index: -1;
     left: 287px;
     top: 54px;
 }
 .control .function{
-    width: 350px;
+    width: 355px;
     background-color: black;
     color: #fff;
     position: absolute;
     z-index: 2;
-    top: -1px;
-    left: 610px;
+    top: 0px;
+    right: 0px;
 }
 .control img{
     position: relative;
     top: -221px;
-    left: 69px;
+    left: 11px;
 }
 .control .youtube-icon{
     position: relative;
@@ -149,5 +161,5 @@ body{
     font-size: 16px;
     position: relative;
     bottom: 293px;
-    left: 233px;
+    left: 238px;
 } 

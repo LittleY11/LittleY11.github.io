@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 960px;
+            /* height: 500px; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+
+        .picturestyle{
+            width: 960px;
+        }
+        #pic img{ 
+            width: 310px;
+            /* height: 320px; */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="about">
+            <div id="my_pic">
+                <img id="my_pics" src="">
+            </div>
+            <div class="name">
+                <p id="button1"></p>
+                <p id="button2"></p>
+                <p id="button3"></p>
+                <p id="button4"></p>
+            </div>
+        </div>
+        <div id="pic">
+        </div>
+    </div>
+    <!-- <h1></h1> -->
+    <!-- <table border="960" width="750"> -->
+        <img id ="image1" src="" alt="">
+        
+        <script>
+            // let my_pic = document.getElementById("my-pic");
+            let button1 = document.getElementById("button1");
+            let button2 = document.getElementById("button2");
+            let button3 = document.getElementById("button3");
+            let button4 = document.getElementById("button4");
+            let img = document.getElementById("my_pics");
+
+            // let h1 = document.querySelector("h1");
+            // let img = document.getElementById("image1");
+
+            let my_pic="小楊";
+            const photoUrl="https://raw.githubusercontent.com/LittleY11/FileStorage/main/d0fe8c094accb5f217ce0135538c0aba-4096x2209-bff68f8f-1646815031.jpeg";
+
+            button1.innerText = "姓名:小楊";
+            button2.innerText = "email:build.gmail.com";
+            button3.innerText = "學校:中華";
+            button4.innerText = "興趣:打羽球";
+            
+            // h1.innerText = moviename;
+            img.src = photoUrl;
+            // img.setAttribute("src", photoUrl)
+            // img.setAttribute("alt", )
+            img.setAttribute("class", "picturestyle")
+
+            const imageArray=[
+                "https://raw.githubusercontent.com/LittleY11/FileStorage/main/%E7%85%A7%E7%89%87/heee.jpg",
+                "https://raw.githubusercontent.com/LittleY11/FileStorage/main/%E7%85%A7%E7%89%87/woho.jpg",
+                "https://raw.githubusercontent.com/LittleY11/FileStorage/main/%E7%85%A7%E7%89%87/ya1.webp",
+            ]
+            
+            // imageArray.forEach((item,index)=>{
+            //     let url = item;
+            //     document.write(url + "<br>");
+            // });
+            
+            imageArray.forEach((url,index)=>{
+                // document.write(url + "<br>");
+                pic.innerHTML +=`<img src = ${url}> `;
+
+            });
+
+
+        </script>
+    <!-- </table> -->
+</body>
+
+</html>
