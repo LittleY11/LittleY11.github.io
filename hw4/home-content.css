@@ -17,10 +17,12 @@
     color: #324255;
 }
 
-.home-content .row {
+.home-content .row:nth-child(odd) {
     margin: 10px 0;
+    display: flex;
+    flex-direction: column-reverse;
 }
-.home-content .row img{
+.title .row img{
     width: 100%;
     vertical-align: top;
 }
