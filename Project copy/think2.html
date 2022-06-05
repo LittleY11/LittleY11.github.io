@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #delay1 {
+            position: relative;
+            transition-property: font-size;
+            transition-duration: 4s;
+            transition-delay: 2s;
+            font-size: 14px;
+        }
+
+        #delay1:hover {
+            transition-property: font-size;
+            transition-duration: 4s;
+            transition-delay: 2s;
+            font-size: 36px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li id="long1">Long, gradual transition...</li>
+        <li id="fast1">Very fast transition...</li>
+        <li id="delay1">Long transition with a 2-second delay...</li>
+        <li id="easeout">Using ease-out timing...</li>
+        <li id="linear">Using linear timing...</li>
+        <li id="cubic1">Using cubic-bezier(0.2, 0.4, 0.7, 0.8)...</li>
+    </ul>
+
+</body>
+
+</html>
+.scroll-top .show:hover {
+    opacity: 1;
+}
+
+.scroll-top .show {
+    visibility: visible;
+    cursor: pointer;
+    opacity: .8;
+
+}
+
+.scroll-top {
+    position: fixed;
+    /* opacity: 0; */
+    /* visibility: hidden; */
+    overflow: hidden;
+    text-align: center;
+    z-index: 11;
+    background-color: rgba(0, 0, 0, .4);
+    color: #000;
+    border:1 solid #000;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    right: 1.5rem;
+    bottom: 50px;
+    padding-top: 2px;
+    border-radius: 2px;
+    border: none;
+    /* -webkit-box-shadow: 0 0 4px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 0 4px 0rgba(0, 0, 0, .1);
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out; */
+
+}
+
+.scroll-top i.fa {
+    line-height: 1;
+    top: 2px;
+}
+
+.fa-2x {
+    font-size: 2em;
+}
+
+/* .fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+} */
