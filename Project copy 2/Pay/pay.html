@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/048b37bb98.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./pay1.css">
+    <link rel="stylesheet" href="./reset.css">
+    <title>Today,Pay!</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control  searchme-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="Orderinformation mw-100">
+            <div class="container row m-auto ">
+                <div class="Paytoorder-fliud">
+                    <div class="Paytoorder my-4 ms-2">
+                        <h3 class=""> 付款 <i class="fa-solid fa-greater-than me-1"></i> 訂購完成</h3>
+                    </div>
+                </div>
+                <div class="accordion mb-3" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header " id="headingOne">
+
+                            <div class="accordion-button bg-white" data-bs-toggle="collapse"
+                                data-bs-target="#Ordererinformation">
+                                <h1 class="page-head">
+                                    <i class="fa-solid fa-chevron-down"></i> 訂購人資料
+                                </h1>
+                            </div>
+                        </h2>
+                        <div id="Ordererinformation" class="accordion-collapse collapse show"
+                            aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="page-text">
+                                    <form class="row g-3 needs-validation" id="profile" novalidate>
+                                        <div class="row">
+                                            <div class="col-md-4 mt-4 mx-4">
+                                                <label for="validationCustom01" class="form-label">名字
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                                <input type="text" class="form-control" id="validationCustom01"
+                                                    placeholder="品叡" required>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4 mt-4 mx-4">
+                                                <label for="validationCustom02" class="form-label">姓氏
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                                <input type="text" class="form-control is-valid" id="validationCustom02"
+                                                    placeholder="陳" required>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-4 mt-4 mx-4">
+                                                <label for="validationCustom08" class="form-label ">國家/地區
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                                <select class="form-select is-invalid" id="validationCustom08" required>
+                                                    <option selected disabled placeholder="">Choose...</option>
+                                                    <option>台灣</option>
+                                                </select>
+                                                <div class="invalid-feedback">
+                                                    此欄位必填
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mt-4 mx-4">
+                                                <label for="validationCustom09" class="form-label">電話號碼
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                                <input type="tel" class="form-control" id="validationCustom09" required>
+                                                <div class="invalid-feedback">
+                                                    此欄位必填
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mt-4 mx-4">
+                                                <label for="validationCustom10" class="form-label">聯絡 E-mail
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                                <input type="email" class="form-control" id="validationCustom10"
+                                                    required>
+                                                <div class="invalid-feedback">
+                                                    此欄位必填
+                                                </div>
+                                            </div>
+                                            <div class="form-check mt-4 mx-4">
+                                                <input class="form-check-input" type="checkbox" placeholder=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label mt-1" for="flexCheckDefault">
+                                                    同時更新會員資料
+                                                </label>
+                                            </div>
+                                            <div class="col-12 mt-3 mx-4">
+                                                <button class="btn btn-info text-light" type="submit">繼續</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="Paytoorder-fliud">
+                    <div class="Paytoorder mt-3 mb-2 ms-2 ">
+                        <h3 class=""> 旅客資料</h3>
+                    </div>
+                </div>
+                <div class="accordion mt-2 " id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header " id="headingOne">
+
+                            <div class="accordion-button bg-white" data-bs-toggle="collapse"
+                                data-bs-target="#Passengerinformation">
+                                <i class="fa-solid fa-chevron-down me-1"></i>
+                                <div class="cart-item d-flex flex-wrap">
+                                    <a href="https://www.kkday.com/zh-tw/product/101369" class=" rounded-3">
+                                        <img class="product-img img-bg w-100 col-sm-4"
+                                            src="https://image.kkday.com/v2/image/get/w_140%2Ch_105%2Cc_fill%2Cq_55%2Ct_webp/s1.kkday.com/product_101369/20200715095654_5Ze05/jpg">
+                                    </a>
+
+                                    <div class="car-detail col-sm-8 ">
+                                        <div class="product-detail">
+                                            <h3 class="title my-2">
+                                                <a href="https://www.kkday.com/zh-tw/product/101369" class="product_detail_text text-dark
+                                                " target="_blank" onclick="event.stopPropagation()">
+                                                    2022澎湖花火節】限時折50｜澎湖吉貝一日遊｜暢玩水上活動｜來回船票
+                                                    & 島上機車 & 目斗嶼登島｜赤崁碼頭出發</a>
+                                            </h3>
+                                            <div class="product-option text-dark my-3">方案 A：租借吉貝島摩托車一部（2 人 1 部）</div>
+                                            <div class="product-option mb-3">用車時間 : 隔天還車
+                                            </div>
+                                        </div>
+
+                                        <div class="critical-info d-inline-block ">
+                                            <i class="fa-solid fa-calendar-days me-2"></i>
+                                            <span>2022-06-23</span>
+                                        </div>
+                                        <div class="critical-info d-inline-block ms-3">
+                                            <i class="fa-regular fa-clock mx-2"></i>
+                                            <span>09 : 30</span>
+                                        </div>
+                                        <div class="critical-info d-inline-block ms-3">
+                                            <i class="fa-solid fa-car mx-2"></i>
+                                            <span>輛 x 1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </h2>
+                        <div id="Passengerinformation" class="accordion-collapse collapse show"
+                            aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="page-text">
+                                    <form class="row g-3 needs-validation" id="profile" novalidate>
+                                        <div class="row">
+                                            <div class="col-md-4 mt-4 mx-4">
+                                                <label class="mb-2">人數</label>
+
+                                                <select id="booking-traveler-quantity" class="form-control">
+                                                    <option placeholder="0" disabled="disabled" selected="selected">請選擇
+                                                    </option>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="tip ms-2 mt-2 mb-4">
+                                            <i class="fa-solid fa-circle-info"></i>
+                                            請詳填下列保險資料
+                                        </div>
+
+                                    </form>
+                                </div>
+
+
+                                <div class="Passenger p-3 mx-2 mb-2 bg-body rounded ">
+                                    <div class="btn-group-title m-2 mb-3">
+                                        <div class="Passenger-title d-flex justify-content-between">
+                                            旅客代表人
+                                            <a href="javascript:;"
+                                                class="Passenger-clean link-secondary text-sm pull-right text-decoration-none ">
+                                                清空
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="form-group"> -->
+
+                                    <div class="btn-group">
+                                        <button class="Passenger-btn  rounded-3 p-3 ms-2 border-0" type="button"
+                                            id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                            請選擇旅客代表人
+                                        </button>
+                                        <ul class="dropdown-menu pe-5 ">
+                                            <li class="active ">
+                                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                                    <div class="name-logo bg-secondary-light  p-2 me-3 ">s</div>
+                                                    同訂購人資料
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-md-4 mt-4 mx-4">
+                                        <label for="validationCustom08" class="form-label ">國家/地區
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <select class="form-select is-invalid" id="validationCustom08" required>
+                                            <option selected disabled placeholder="">Choose...</option>
+                                            <option>台灣</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            此欄位必填
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mt-4 mx-4">
+                                        <label for="validationCustom011" class="form-label">出生日期
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="date" class="form-control" id="validationCustom011" required>
+                                        <div class="invalid-feedback">
+                                            此欄位必填
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mt-4 mx-4">
+                                        <label for="validationCustom011" class="form-label">中文名
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="text" class="form-control" id="validationCustom011"
+                                            placeholder="例 : 品叡" required>
+                                        <div class="invalid-feedback">
+                                            此欄位必填
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mt-4 mx-4">
+                                        <label for="validationCustom02" class="form-label">中文姓
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="text" class="form-control" id="validationCustom02"
+                                            placeholder="例 : 陳" required>
+                                        <div class="invalid-feedback">
+                                            此欄位必填
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mt-4 mx-4">
+                                        <label for="validationCustom02" class="form-label">台灣身份證字號
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="text" class="form-control" id="validationCustom02"
+                                            placeholder="請輸入台灣身分證字號" required>
+                                        <div class="invalid-feedback">
+                                            此欄位必填
+                                        </div>
+                                    </div>
+
+                                    <a class="Add-travelers btn btn-default btn-xs  mt-4 mx-2"><i
+                                            class="fa fa-plus"></i>
+                                        新增常用旅客
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Paytoorder-fliud">
+                    <div class="Paytoorder mt-4 mb-2 ms-2">
+                        <h3> 付款</h3>
+                    </div>
+                </div>
+                <div class="accordion mb-3" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header " id="headingOne">
+
+                            <div class="accordion-button bg-white" data-bs-toggle="collapse"
+                                data-bs-target="#Ordererinformation">
+                                <h1 class="page-head">
+                                    <i class="fa-solid fa-chevron-down"></i> 請選擇付款方式
+                                </h1>
+                            </div>
+                        </h2>
+                        <div id="Ordererinformation" class="accordion-collapse collapse show"
+                            aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="page-text">
+                                    <form class="row g-3 needs-validation" id="profile" novalidate>
+
+                                        <div class="con">
+                                            <div class="form-check d-flex py-3">
+                                                <input class="form-check-input me-3" type="radio" id="Choosepay">
+                                                <label class="form-check-label mt-1 me-4" for="Choosepay"> Line Pay
+                                                </label>
+                                                <img data-v-23a5a92b=""
+                                                    src="https://cdn.kkday.com/pc-web/assets/img/payment/ic_linepay_2.svg"
+                                                    class="pmch-logo linepay-point ms-5">
+                                            </div>
+                                        </div>
+                                        <div class="con">
+                                            <div class="form-check d-flex py-3">
+                                                <input class="form-check-input me-3" type="radio" id="Choosepay">
+                                                <label class="form-check-label mt-1 me-4" for="Choosepay"> 信用卡/簽帳金融卡
+                                                </label>
+                                                <img data-v-23a5a92b=""
+                                                    src="https://cdn.kkday.com/pc-web/assets/img/payment/ic_linepay_2.svg"
+                                                    class="pmch-logo linepay-point ms-5">
+                                            </div>
+                                        </div>
+                                        <div class="con">
+                                            <div class="form-check d-flex py-3">
+                                                <input class="form-check-input me-3" type="radio" id="Choosepay">
+                                                <label class="form-check-label mt-1 me-4" for="Choosepay"> 國民旅遊卡
+                                                </label>
+                                                <img data-v-23a5a92b=""
+                                                    src="https://cdn.kkday.com/pc-web/assets/img/payment/ic_linepay_2.svg"
+                                                    class="pmch-logo linepay-point ms-5">
+                                            </div>
+                                        </div>
+                                        <div class="con">
+                                            <div class="form-check d-flex py-3">
+                                                <input class="form-check-input me-3" type="radio" id="Choosepay">
+                                                <label class="form-check-label mt-1 me-4" for="Choosepay"> 街口支付
+                                                </label>
+                                                <img data-v-23a5a92b=""
+                                                    src="https://cdn.kkday.com/pc-web/assets/img/payment/ic_linepay_2.svg"
+                                                    class="pmch-logo linepay-point ms-5">
+                                            </div>
+                                        </div>
+                                        <div class="con">
+                                            <div class="form-check- d-flex py-3">
+                                                <input class="form-check-input me-3" type="radio" id="Choosepay">
+                                                <label class="form-check-label mt-1 me-4" for="Choosepay"> Pi 拍錢包
+                                                </label>
+                                                <img data-v-23a5a92b=""
+                                                    src="https://cdn.kkday.com/pc-web/assets/img/payment/ic_linepay_2.svg"
+                                                    class="pmch-logo linepay-point ms-5">
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- <div class="con"> -->
+                <div class="accordion my-3 " id="accordionExample">
+                    <div class="accordion-item">
+
+                        <div class="caculate">
+                            <div class="total mb-3">
+                                <span class="text-end">1件商品合計</span>
+                                <span class=" fw-bolder fs-3 mt-2">TWD 3,120</span>
+                            </div>
+                            <a href="#" class="fw-bolder mb-3 mx-3">前往結帳</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- </div> -->
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4194463c7d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="btn-datepicker">
+
+                <div class="input-group mb-3">
+
+                    <div class="input-group-addon">
+                        <!-- <i class="fa-regular fa-calendar">
+                            <input type="button" class="fa-regular fa-calendar input-group-text" name="datefilter" value=""> -->
+                        </i>
+                    </div>
+
+
+                    <button type="button" class="form-control" placeholder="篩選出發日期"
+                        aria-describedby="basic-addon1"></button>
+                </div>
+
+                <div class="input-group mb-3">
+                    <button class="fa-regular fa-calendar btn btn-outline-white" type="button" name="datefilter">
+                        <!-- <i class="fa-regular fa-calendar"> -->
+                    </button>
+                    <input type="button" name="datefilter" value="篩選出發日期"
+                        class="fa-regular fa-calendar btn btn-outline-white" placeholder="篩選出發日期">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            $('input[name="datefilter"]').daterangepicker({
+                autoUpdateInput: false,
+                locale: {
+                    cancelLabel: 'Clear'
+                }
+            });
+
+            $('input[name="datefilter"]').on('apply.daterangepicker', function (ev, picker) {
+                $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+            });
+
+            $('input[name="datefilter"]').on('cancel.daterangepicker', function (ev, picker) {
+                $(this).val('');
+            });
+
+        });
+    </script>
+</body>
+
+</html>
