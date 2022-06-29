@@ -1,0 +1,72 @@
+$button-height:34px;
+
+*{
+    list-style: none;
+    text-decoration: none;
+}
+
+li{
+    //暫時先不讓他靠邊
+    margin: 11px;
+    width: 188px;
+
+    //紅白共同設定
+    >a{
+        display: block;
+        //文字致中
+        text-align: center;
+        line-height: $button-height;
+
+        box-sizing: border-box;
+        
+    }
+    //白底
+    >a:first-child{
+        border: 1px #444 dotted;
+        color: #000;
+        background-color: #fff;
+
+        height: $button-height;
+        // overflow: hidden;
+    }
+
+    //紅底
+    >a:last-child{
+        background-color: #f00;
+        color:  #fff;
+
+
+        transition: all 1.6s 0s ease ;
+        // overflow: hidden;
+
+        //一開始只有一條細線
+        height: 1px;
+
+        //和白塊地下邊框重疊
+        margin-top:-1px ;
+
+        //鎖住content box 的位置 使其不動
+        padding-top: 1px;
+
+        // overflow: hidden;
+
+        div{
+            margin-top: -$button-height+1;
+        }
+
+        &:hover{
+            // background-color: #fff;
+            //摸到要長高
+            height: $button-height;
+
+            //往上移動 一個白塊高
+            margin-top: -$button-height;
+
+            //鎖住content box 的位置 使其不動
+            padding-top: $button-height;
+        }
+    }
+
+}
+
+

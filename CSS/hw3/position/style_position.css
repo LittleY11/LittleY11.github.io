@@ -1,0 +1,165 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.function h2{
+    background-color: #ae0014;
+    font-size: 40px;
+    text-align: center;
+
+}
+.function h2 span{
+    font-size: 120px;
+    writing-mode: vertical-lr;
+    vertical-align: middle;
+}
+.control .function h3{
+    font-size: x-large;
+    padding: 30px 22px 10px;
+}
+.control-odd .function h3{
+    font-size: x-large;
+    padding: 30px 22px 10px;
+}
+.function p{
+    font-size: 20px;
+    line-height: 2;
+    padding: 0px 25px 19px;
+}
+
+
+.innovation h2{
+    color: #bb0404;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+.innovation-title{
+    color: #000;
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-content: space-between;    
+}
+.innovation h2::after{
+    content: '';
+    display: block;
+    width: 66%;
+    margin-left: 12px;
+    border-top: 1px solid #ff0000;
+
+}
+.innovation h3{
+    background-color: #000;
+    color: #fff;
+    padding: 5px 15px;
+    
+}
+.innovation p{
+    margin: 10px 0;
+    line-height: 1.5;
+}
+.innovation p::before{
+    content: '▪';
+    color: red;
+} 
+
+.control-odd{
+    width: 960px;
+    height: 805px;
+    position: relative;
+    margin: 50px auto;
+}
+.control-odd .block{
+    background-color: #eeeeee;
+    width: 440px;
+    height: 270px;
+    z-index: -1;
+    position: absolute;
+    right: 0px;
+    top: 42px;
+}
+.control-odd .function{
+    width: 355px;
+    height: 390px;
+    background-color: black;
+    color: #fff;
+    position: absolute;
+    z-index: 2;
+}
+.control-odd img{
+    position: relative;
+    top: 120px;
+    left: 180px;
+}
+.control-odd .youtube-icon{
+    position: relative;
+    z-index: 2;
+    left: 648px;
+    bottom: 232px;
+}
+.control-odd .innovation{
+    display: flex;
+    flex-direction: column;
+    background-color: #ddd;
+    align-items: flex-start;
+    width: 680px;
+    line-height: 0.5;
+    padding: 0 20px;
+    font-size: 16px;
+    position: relative;
+    bottom:-50px;
+    right: -45px;
+}
+
+.control{
+    width: 960px;
+    height: 842px;
+    position: relative;
+    margin: 50px auto;
+}
+.control .block{
+    background-color: #eeeeee;
+    width: 520px;
+    height: 410px;
+    position: relative;
+    z-index: -1;
+    left: 287px;
+    top: 54px;
+}
+.control .function{
+    width: 355px;
+    background-color: black;
+    color: #fff;
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    right: 0px;
+}
+.control img{
+    position: relative;
+    top: -221px;
+    left: 11px;
+}
+.control .youtube-icon{
+    position: relative;
+    z-index: 2;
+    right: 11px;
+    bottom: 240px;
+}
+.control .innovation{
+    display: flex;
+    flex-direction: column;
+    background-color: #ddd;
+    align-items: flex-start;
+    width: 682px;
+    line-height: 1;
+    padding: 0 20px;
+    font-size: 16px;
+    position: relative;
+    bottom: 293px;
+    left: 238px;
+} 
