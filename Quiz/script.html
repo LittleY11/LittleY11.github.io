@@ -1,0 +1,17 @@
+<script>
+
+    let heroArray = [];
+    let container;
+    container = document.querySelector("#container");
+
+    let boxTemplate = document.querySelector("#boxTemplate")
+
+    let lolArray
+    fetch(url)
+        .then(response => response.json())
+        .then(result => {
+            // console.log(result.data)
+            lolArray = Object.values(result.data)
+            afterResponse()
+        })
+</script>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4194463c7d.js" crossorigin="anonymous"></script>
+    <title>Hello, To Do List!</title>
+</head>
+
+<body>
+    <h1>To Do List</h1>
+    <div class="input-group mb-3">
+        <input type="text" id="newthings" class="form-control" placeholder="想輸啥輸啥">
+        <button class="btn btn-outline-secondary" type="button" id="plus">新增</button>
+    </div>
+    <div id="container">
+    </div>
+
+    <template id="boxTemplate">
+        <div id="row" class="col-xl-3 col-lg-4 col-md-6 col-sm-12 my-3" box-index="">
+            <ul id="todo-list" class="">
+                <li class="todo border border-1 p-3 mt-1 d-flex">
+                    <div class="input-group mb-3">
+                        <div class="input-group-text">
+                            <input class="form-check-input mt-0" type="checkbox" value="">
+                        </div>
+                        <input type="text" id="text" class="form-control">
+                        <button class="btn bg-warning text-black mx-2" type="button" id="edit">編輯</button>
+                        <button class="btn bg-success text-white mx-2 d-none" type="button" id="save">保存</button>
+                        <button class="btn bg-danger text-white mx-2" type="button" id="delete">刪除</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </template>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script>
+        let dataArray = [];
+        let key = "dataArray"
+        let container = document.querySelector("#container");
+        let boxTemplate = document.querySelector("#boxTemplate")
+        let input = document.querySelector('#newthings')
+        let btn_plus = document.querySelector("#plus")
+
+        window.onload = function () {
+            getData()
+            btn_plus.onclick = () => {
+                // 物件裡會有很多資訊要存 
+                let thingobj = {
+                    isDone: false,
+                    text: input.value
+                }
+                // 不能讀NULL的屬性 (正在讀取value)
+                container.append(getCard(thingobj, dataArray.length));
+                dataArray.push(thingobj)
+                localStorage.setItem(key, JSON.stringify(dataArray))
+            }
+        }
+
+        function getCard(thingobj, index) {
+            let cloneCard = boxTemplate.content.cloneNode(true)
+            const ckbox = cloneCard.querySelector('input[type="checkbox"]')
+            const input_text = cloneCard.querySelector("#text")
+            const btn_edit = cloneCard.querySelector("#edit");
+            const btn_save = cloneCard.querySelector("#save");
+            const btn_delete = cloneCard.querySelector("#delete");
+
+
+            ckbox.checked = thingobj.isDone
+            ckbox.disabled = true
+            input_text.value = thingobj.text
+            input_text.disabled = true
+
+            btn_edit.addEventListener("click", function () {
+                ckbox.disabled = false
+                input_text.disabled = false
+
+                btn_edit.classList.add('d-none')
+                btn_save.classList.remove('d-none')
+
+            });
+
+            btn_save.addEventListener("click", function () {
+                // newObj.isDone = ckbox.checked
+                // newObj.text = input_text.value
+                let newObj = {
+                    isDone: ckbox.checked,
+                    text: input_text.value
+                }
+                dataArray[index] = newObj
+                localStorage.setItem(key, JSON.stringify(dataArray))
+                refreshUI()
+            });
+
+            btn_delete.addEventListener("click", function () {
+                dataArray.splice(index, 1)
+                localStorage.setItem(key, JSON.stringify(dataArray))
+                refreshUI()
+            });
+
+            console.log(cloneCard.querySelector("#text").value)
+
+            return cloneCard;
+        }
+        function getData() {
+            // 變數儲存 一直需要呼叫的字串 避免魔術字串
+            let jsonStr = localStorage.getItem(key)
+            //做防呆
+            if (jsonStr == null) return
+            dataArray = JSON.parse(jsonStr)
+            refreshUI()
+        }
+
+        function refreshUI() {
+            container.innerHTML = "";
+            dataArray.forEach((data, index) => {
+                container.append(getCard(data, index));
+            })
+        }
+    </script>
+
+</body>
+
+</html>
