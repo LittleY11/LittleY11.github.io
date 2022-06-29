@@ -26,8 +26,12 @@
             padding: 10px;
         }
 
-        .chooseedValue {
-            background-color: #f00;
+        img {
+            max-width: 20%;
+        }
+
+        button :hover {
+            color: black;
         }
     </style>
 
@@ -42,7 +46,7 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand m-auto text-white" href="#">Apple</a>
+            <a class="navbar-brand m-auto text-white" href="https://www.apple.com/tw/">Apple</a>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav m-auto">
                     <li class="nav-item m-auto">
@@ -75,32 +79,36 @@
                     <li class="nav-item m-auto">
                         <a class="nav-link text-white" href="#">支援服務</a>
                     </li>
+                    <li class="nav-item m-auto">
+                        <a class="nav-link text-light" href="#">
+                            <i class="fa-brands fa-sistrix"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item m-auto">
+                        <a class="nav-link text-light" href="#">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container botton m-auto d-flex justify-content-center">
-        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-            <input type="checkbox" class="btn-check" id="iPadAir" autocomplete="off">
-            <label class="btn btn-outline-primary" for="btncheck1">iPadAir</label>
-
-            <input type="checkbox" class="btn-check" id="iPad" autocomplete="off">
-            <label class="btn btn-outline-primary" for="btncheck2">iPad</label>
-
-            <input type="checkbox" class="btn-check" id="iPadmini" autocomplete="off">
-            <label class="btn btn-outline-primary" for="btncheck3">iPadmini</label>
+    <div class="container d-flex justify-content-between ">
+        <div class="btn-group " role="group" aria-label="Basic checkbox toggle button group">
+            <button type="button" class="btn btn-outline-secondary" id="iPadAir">iPadAir</button>
+            <button type="button" class="btn btn-outline-secondary" id="iPad">iPad</button>
+            <button type="button" class="btn btn-outline-secondary" id="iPadmini">iPadmini</button>
         </div>
+        <div class="money "></div>
     </div>
 
     <div class="container m-auto ">
         <div class="row py-5 align-items-md-center">
-            <div class="col-6 col-md-6 mw-100">
+            <div class="pic col-6 col-md-6 mw-100">
                 <img src="./圖片/iPadAirall.jpg" class="allpic mw-100" alt="">
             </div>
-            <div class="col-6 col-md-6 mw-100 " id="b">
+            <div class="col-6 col-md-6 mw-100 " id="b"></div>
 
-            </div>
-            <div class="money"></div>
             <!-- <div class="col-12 col-md-6 mw-100">
                 <img src="./圖片/LINE_ALBUM_IPAD_PIC_220502_19.jpg" class="mw-20" class="mw-100" alt="">
                 <img src="./圖片/LINE_ALBUM_IPAD_PIC_220502_2.jpg" class="mw-20" class="mw-100" alt="">
@@ -124,31 +132,30 @@
             storages = [],
             networks = []
 
-        let pic = ["./圖片/gray.jpg", "./圖片/pink.jpg", "./圖片/purple.jpg", "./圖片/blue.jpg", "./圖片/starlight.jpg"]
-        // let allpic = document.querySelector('.allpic')
-        let allpic = ["./圖片/graycolor.jpg","./圖片/pinkcolor.jpg","./圖片/purplecolor.jpg","./圖片/bluecolor.jpg","./圖片/starlightcolor.jpg"]
+        let ipadpic = ["./圖片/gray.jpg", "./圖片/pink.jpg", "./圖片/purple.jpg", "./圖片/blue.jpg", "./圖片/starlight.jpg"]
+        let allpic = document.querySelector('.allpic')
+        let btnpic = ["./圖片/graycolor.jpg", "./圖片/pinkcolor.jpg", "./圖片/purplecolor.jpg", "./圖片/bluecolor.jpg", "./圖片/starlightcolor.jpg"]
 
-        let img = document.createElement('img')
-
-
-
-
+        let img = document.querySelector('img')
 
         //UI 靜態有的寫在此!
         let iPadAir = document.querySelector("#iPadAir");
-
         let b = document.querySelector("#b");
         let money = document.querySelector(".money")
 
 
         window.onload = function () {
-
             iPadAir.addEventListener("click", iPadAir);
             requestJSON1()
 
             // color.addEventListener("click", colors);
             // requestJSON2()
         }
+
+        // 當點擊顏色btn 會收合且標題會變成顏色text 
+        // 當點擊顏色text 展開 
+
+
 
         function requestJSON1() {
             let xhr = new XMLHttpRequest();
@@ -167,7 +174,8 @@
         let chooseedValue = {
             color: null,
             storage: null,
-            network: null
+            network: null,
+            // price: null
         }
         //color陣列存放不同的顏色
         // 顏色5 記憶體容量2種 網路2 
@@ -184,10 +192,12 @@
                     storages.push(data.storage)
                 if (!networks.includes(data.network))
                     networks.push(data.network)
+
             })
             // 檢查收集好的陣列
             console.log(colors, storages, networks)
         }
+
 
         // b >
         // div > h3{顏色} + button{color}*n
@@ -199,66 +209,93 @@
             makeSpec('顏色', colors, 'color')
             makeSpec('記憶體', storages, 'storage')
             makeSpec('網路', networks, 'network')
+            // makeSpec('價錢', price, 'price')
+
 
             function makeSpec(title, array, key) {
                 let div = document.createElement('div')
                 let allcolor = document.createElement('allcolor')
                 div.setAttribute('class', allcolor)
                 b.append(div)
-
-
+                let price = document.createElement('price')
+                // b.append(price)
 
                 let h3 = document.createElement('h3')
                 div.append(h3)
                 h3.innerText = title
 
+                let p = document.createElement('p')
+                div.append(p)
 
                 // 迭代裡面的每個東西 item參數
                 // 每個顏色 創一個按鈕>接上去>設定>
                 array.forEach((value, index) => {
                     let button = document.createElement("button")
                     div.append(button)
-                    button.innerText = `${value}`
+                    // button.innerText = `${value}`
+                    button.setAttribute("class", "col-12 col-md-6 btn-outline-dark", key)
+
+                    let btnPicTxt = document.createElement("span")
+                    btnPicTxt.setAttribute("class", "d-flex flex-column align-items-center")
+
+                    if (key == 'color') {
+                        let img = document.createElement("img")
+                        img.src = btnpic[index]
+                        btnPicTxt.append(img)
+                        button.append(btnPicTxt)
+                    }
+                    div.append(button)
+
+                    let span = document.createElement("span")
+                    span.innerText = value
+                    btnPicTxt.appendChild(span)
+                    button.appendChild(btnPicTxt)
+                    // button.innerHTML += `${value}`
 
                     // 點擊後 改變自己那一組 選到誰的變數
                     //拿各組選到的值 去篩選 (記錄選到誰的是全域變數 EASY)
                     button.addEventListener("click", function () {
                         chooseedValue[key] = value
                         console.log(chooseedValue)
+
                         if (key == 'color') {
                             // 存放路徑
-                            allpic.src = pic[index]
-                            allpic.src = allpic[index]
-
+                            img.src = ipadpic[index]
+                            // allpic.src = allpic[index]
                         }
-                        console.log(pic)
-                        allpic.innerText = ""
                         changeImgMoney()
                     })
                 })
                 div.append(document.createElement('hr'))
             }
         }
-
         function changeImgMoney() {
-
             let result = iPadArray.filter(data =>
                 data.color == chooseedValue.color &&
                 data.storage == chooseedValue.storage &&
                 data.network == chooseedValue.network
-
             )
             console.log(result)
             //找個變數接起來
             //防呆 檢查沒過關  跳過
             if (result.length != 1) return
+            img.setAttribute("alt", result[0].picture)
             //迭帶出 那一筆  的價錢
-            money.innerText = result[0].price
+            money.innerText = `NT$${result[0].price}起`
+            price(money.innerText)
         }
+        function price(prices) {
+            let div = document.createElement('div')
+            let h3 = document.createElement('h3')
+            let p = document.createElement('p')
+            p.innerText = prices
+            h3.innerText = "價錢"
 
+            div.append(h3, p)
+            b.append(div)
+            // debugger
 
-
-
+        }
 
     </script>
 </body>

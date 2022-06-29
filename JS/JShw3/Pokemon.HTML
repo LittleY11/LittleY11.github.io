@@ -14,6 +14,9 @@
     <script>
         // 全域
         let container;
+        let fileName=0;
+        let i = 1; //下一隻要加的圖的編好 vs 已經加到哪張圖
+        const max = 898;
 
         window.onload = function(){
             container = document.getElementById("container");
@@ -25,7 +28,6 @@
         function appendPokemon(){
             //1.create <img>
             let img = document.createElement("img");
-
             //2.Set <img>
             img.setAttribute("src","https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png");
             //3. append <img> into container
@@ -41,21 +43,32 @@
         }
 
         function allPokemon(){
-            for(let i = 1; i<898; i++){
-                let fileName = i.toString().padStart(3,"0");
-                let pathFile=`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${fileName}.png`;
+            // 補清空 刷新
+            container.innerHTML="";
+            i=1;
 
-                let img = document.createElement("img");
-                img.setAttribute("src",pathFile);
-
-
-                img.addEventListener("click",function(event){
-                    container.removeChild(event.target);
-                });
-                container.append(img);
+            for( ; i<898; i++){
+                AddOneImg()
+        }
+        function AddPokemon(){
+            if (i >max){
+                alert('加暴')
+                return;
             }
+            AddOneImg()
+            i++;
         }
 
+        function removePokemon(){
+            container.removeChild(container.lastChild);
+            i--;
+        }
+
+
+        function resetPokemon(){
+            container.innerHTML="";
+            i = 1;
+        }
         // +1 作業
         function AddPokemon(){
             let fileName = i.toString().padStart(3,"0");
@@ -64,20 +77,6 @@
             img.setAttribute("src", pathFile);
             container.append(img);
             i++;
-        }
-        function removePokemon(){
-            container.removeChild(container.lastChild);
-            i = i-1;
-        }
-        function resetPokemon(){
-            container.innerHTML="";
-            i =1;
-        }
-
-
+        }}
     </script>
-
-
-
-
 </body>
